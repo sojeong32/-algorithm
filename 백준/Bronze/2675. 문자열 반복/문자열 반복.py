@@ -1,11 +1,7 @@
-num = int(input())
-
-empty_list = []
-for _ in range(int(num)):
-    empty_list.append(input().split())
+data = [input().split() for _ in range(int(input()))]
 
 
-for i in empty_list:
+for i in data:
     j_list = []
     for j in i[1]:
         j_list.append(j*int(i[0]))
