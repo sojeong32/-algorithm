@@ -9,7 +9,6 @@ def omok(player):
                     count = 0
                     while 0 <= i < 19 and 0 <= j < 19 and arr[i][j] == player:
                         count += 1
-                        # visited[i][j] = 1
                         i = i + di[k]
                         j = j + dj[k]
                         if count == 5:
@@ -24,11 +23,9 @@ def omok(player):
                                 return ans
 
 arr = [list(map(int, input().split())) for _ in range(19)]
-# visited = [[0]*19 for _ in range(19)]
 
 di = [0, 1, 1, -1]  #우, 하, 4시, 2시 방향설정
 dj = [1, 0, 1, 1]
-# flag = 0
 ans = 0
 result = []
 
