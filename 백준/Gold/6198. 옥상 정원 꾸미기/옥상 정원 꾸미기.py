@@ -9,14 +9,19 @@ for _ in range(N):
 st = []
 sumone = 0
 while bd:
-    if not st:
-        st.append(bd.popleft())
-
-    elif bd[0] < st[-1]:
-        st.append(bd.popleft())
-        sumone += len(st) - 1
-    else:
-        st.pop()
-
+    while True:
+        if not st:
+            if bd:
+                st.append(bd.popleft())
+                break
+            else:
+                break
+        elif bd[0] < st[-1]:
+            st.append(bd.popleft())
+            sumone += len(st) - 1
+            break
+        else:
+            st.pop()
+            break
 
 print(sumone)
